@@ -6,6 +6,7 @@ import 'package:sky_scrapper_app/controller/Weather_Controller.dart';
 import 'package:sky_scrapper_app/utils/MyRoutes.dart';
 import 'package:sky_scrapper_app/views/screens/SearchPage.dart';
 import 'package:sky_scrapper_app/views/screens/SettingPage.dart';
+import 'package:sky_scrapper_app/views/screens/Splash_Screen.dart';
 import 'package:sky_scrapper_app/views/screens/home_page.dart';
 
 void main() async {
@@ -16,7 +17,7 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => WeatherController(),
+          create: (context) => WeatherController(preferences: preferences),
         ),
         ChangeNotifierProvider(
           create: (context) => ThemeController(preferences: preferences),
@@ -44,11 +45,12 @@ class MyApp extends StatelessWidget {
       themeMode: Provider.of<ThemeController>(context).getTheme
           ? ThemeMode.dark
           : ThemeMode.light,
-      initialRoute: MyRoutes.home,
+      initialRoute: MyRoutes.Splash_Screen,
       routes: {
         MyRoutes.home: (context) => HomePage(),
         MyRoutes.SettingPage: (context) => SettingPage(),
         MyRoutes.SearchPage: (context) => SearchPage(),
+        MyRoutes.Splash_Screen: (context) => SplashScreen(),
       },
     );
   }

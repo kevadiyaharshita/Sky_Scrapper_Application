@@ -14,6 +14,7 @@ class Weather {
   int sunrise;
   int sunset;
   int dt;
+  String name;
 
   Weather({
     required this.main,
@@ -31,6 +32,7 @@ class Weather {
     required this.sunrise,
     required this.sunset,
     required this.dt,
+    required this.name,
   });
 
   factory Weather.fromMap({required Map data}) {
@@ -50,6 +52,7 @@ class Weather {
       sunrise: data['sys']['sunrise'],
       sunset: data['sys']['sunset'],
       dt: data['dt'],
+      name: data['name'],
     );
   }
 }

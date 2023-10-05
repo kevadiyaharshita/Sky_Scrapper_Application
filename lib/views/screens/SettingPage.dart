@@ -4,6 +4,7 @@ import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sky_scrapper_app/controller/Theme_Controller.dart';
+import 'package:sky_scrapper_app/utils/BackGround_utils.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({super.key});
@@ -51,8 +52,7 @@ class SettingPage extends StatelessWidget {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
-                                image: NetworkImage(
-                                    'https://i.pinimg.com/564x/ef/0e/0c/ef0e0c39a7dda3e3077faaf052c1edc2.jpg'),
+                                image: NetworkImage(bgImage),
                                 fit: BoxFit.fill,
                               ),
                               border: Border.all(color: Color(0xff5E86B2)),
@@ -144,8 +144,7 @@ class SettingPage extends StatelessWidget {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
-                                image: NetworkImage(
-                                    'https://i.pinimg.com/564x/ef/0e/0c/ef0e0c39a7dda3e3077faaf052c1edc2.jpg'),
+                                image: NetworkImage(bgImage),
                                 fit: BoxFit.fill,
                               ),
                               border: Border.all(color: Color(0xff5E86B2)),

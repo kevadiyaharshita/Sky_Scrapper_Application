@@ -169,11 +169,25 @@ class Wind extends StatelessWidget {
                           'S',
                         ),
                       ),
-                      Divider(
-                        color: Colors.red,
-                        thickness: 2,
-                        // indent: 2,
-                        // endIndent: w / 2,
+                      Positioned(
+                        top: 68,
+                        left: 40,
+                        child: SizedBox(
+                          width: 70,
+                          child: Transform.rotate(
+                            angle: pi / 2,
+                            child: Transform.rotate(
+                              angle: degree * pi * 2 / 360,
+                              child: Divider(
+                                endIndent: 30,
+                                color: Colors.red,
+                                thickness: 2,
+                                // indent: 2,
+                                // endIndent: w / 2,
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
